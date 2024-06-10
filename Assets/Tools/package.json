@@ -1,0 +1,36 @@
+{
+  "name": "wtf.cmd.tools",
+  "version": "0.0.6",
+  "displayName": "cmd.wtf Unity Tools",
+  "description": "A small collection of tools that multiple projects make use of.",
+  "category": "Libraries",
+  "dependencies": {
+    "com.unity.inputsystem": "1.3.0"
+  },
+  "unity": "2018.1",
+  "keywords": [
+    "tools",
+    "editor",
+    "attributes",
+    "wildcard",
+    "gizmo",
+    "gizmos",
+    "icons",
+    "threading",
+    "tasks",
+    "coroutines",
+    "autohook",
+    "getcomponent",
+    "findcomponent",
+    "dynamics",
+    "math",
+    "interpolation"
+  ],
+  "author": {
+    "name": "Chris Marc Dailey (nitz)",
+    "url": "https://cmd.wtf/"
+  },
+  "license": "None",
+  "hideInEditor": false,
+  "type": "library"
+}
