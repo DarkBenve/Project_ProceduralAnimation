@@ -21,10 +21,12 @@ namespace Script.CharacterMovement
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _currentAxis = SelectController();
         }
 
         private void Update()
         {
+            //If not change controller in realtime off this
             _currentAxis = SelectController();
         }
 
