@@ -14,6 +14,8 @@ namespace Script.CharacterMovement
         [SerializeField] private ControllerSwitch selectController;
         [SerializeField] private float speed = 6;
         [SerializeField] private float speedRotation = 700;
+        [Header("Reference")]
+        [SerializeField] private Transform cameraTransform;
 
         private string[] _currentAxis;
         private Rigidbody _rigidbody;
@@ -36,7 +38,7 @@ namespace Script.CharacterMovement
             float movementVertical = Input.GetAxis(_currentAxis[1]);
 
             Vector3 movement = new Vector3(movementHorizontal, 0.0f, movementVertical).normalized * (speed * Time.fixedDeltaTime);
-
+            movement = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movement;
             if (movement.magnitude >= 0.1f)
             {
                 float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg;
