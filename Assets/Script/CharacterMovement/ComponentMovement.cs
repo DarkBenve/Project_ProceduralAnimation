@@ -38,31 +38,14 @@ namespace Script.CharacterMovement
             float movementHorizontal = Input.GetAxis(_currentAxis[0]);
             float movementVertical = Input.GetAxis(_currentAxis[1]);
 
-            Vector3 movement = new Vector3(movementHorizontal, 0.0f, movementVertical).normalized *
-                               (speed * Time.fixedDeltaTime);
-            movement = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movement;
-            if (movement.magnitude >= 0.1f)
-            {
-                float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg;
-                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref speedRotation, 0.1f);
+            var direction = new Vector3(movementHorizontal, 0, movementVertical);
+            transform.position += direction.normalized * (speed * Time.fixedDeltaTime);
 
-                _rigidbody.rotation = Quaternion.Euler(0, angle, 0);
-
-                _rigidbody.MovePosition(_rigidbody.position + movement);
-            }
-            else
-            {
-                _rigidbody.velocity = Vector3.zero;
-                _rigidbody.angularVelocity = Vector3.zero;
-            }
-
-            if (!IsTouchGround())
-            {
-                _rigidbody.AddForce(Vector3.down * gravityForce, ForceMode.Force);
-            }
-
-            var position = transform.position;
-            Debug.DrawRay(new Vector3(position.x, position.y + 0.9f, position.z), Vector3.down, Color.blue, 0.5f);
+            // if (!IsTouchGround())
+            // {
+            //     _rigidbody.AddForce(Vector3.down * gravityForce, ForceMode.Force);
+            // }
+            
         }
 
         private string[] SelectController()
