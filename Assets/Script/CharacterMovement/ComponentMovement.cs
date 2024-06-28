@@ -39,8 +39,16 @@ namespace Script.CharacterMovement
             float movementVertical = Input.GetAxis(_currentAxis[1]);
 
             var direction = new Vector3(movementHorizontal, 0, movementVertical);
-            transform.position += direction.normalized * (speed * Time.fixedDeltaTime);
 
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+    
+                // Imposta la rotazione del personaggio verso la rotazione calcolata
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * speedRotation);
+            }
+
+            transform.position += direction.normalized * (speed * Time.fixedDeltaTime);
             // if (!IsTouchGround())
             // {
             //     _rigidbody.AddForce(Vector3.down * gravityForce, ForceMode.Force);
