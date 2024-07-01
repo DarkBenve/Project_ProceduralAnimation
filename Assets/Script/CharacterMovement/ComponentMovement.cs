@@ -39,7 +39,8 @@ namespace Script.CharacterMovement
             float movementVertical = Input.GetAxis(_currentAxis[1]);
 
             var direction = new Vector3(movementHorizontal, 0, movementVertical);
-
+            direction = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * direction;
+            
             if (direction != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
