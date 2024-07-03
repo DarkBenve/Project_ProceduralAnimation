@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263913849656189358}
+  - component: {fileID: 157219608733798995}
   m_Layer: 0
   m_Name: R eye
   m_TagString: Untagged
@@ -62,6 +63,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157219608733798995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412475784368474779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2038890313342470947
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +103,8 @@ Transform:
   m_LocalPosition: {x: -0.065877296, y: 0.093437195, z: -0.0000009536743}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1091534672711763263}
   m_Father: {fileID: 288996277746976729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2718601253540919861
@@ -117,12 +131,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2718601253540919861}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06586893, y: 0.38731322, z: 0.58790684}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.49999964, y: 0.49999964, z: 0.5000011, w: -0.49999964}
+  m_LocalPosition: {x: 2.9387674, y: 5.879069, z: -0.00008881092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7444821005481539942}
+  m_Father: {fileID: 6475849975361110651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3490178777076621691
 GameObject:
@@ -204,7 +218,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4261919329267687945}
-  - {fileID: 1091534672711763263}
   m_Father: {fileID: 3940983280518691917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3441086272046785712
@@ -663,7 +676,8 @@ Transform:
   m_LocalPosition: {x: 0.06587904, y: 0.093437314, z: -0.00000047683716}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1401016115588263895}
   m_Father: {fileID: 7444821005481539942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6018288755045739008
@@ -1136,6 +1150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906416}
+  - component: {fileID: 8423172599202495983}
   m_Layer: 0
   m_Name: TT R Forearm
   m_TagString: Untagged
@@ -1159,6 +1174,18 @@ Transform:
   - {fileID: 6018288755045906418}
   m_Father: {fileID: 6018288755045906424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8423172599202495983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906418}
+  - component: {fileID: 6738739667205899968}
   m_Layer: 0
   m_Name: TT R Hand
   m_TagString: Untagged
@@ -1195,6 +1223,18 @@ Transform:
   - {fileID: 6018288755045906376}
   m_Father: {fileID: 6018288755045906416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6738739667205899968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906420}
+  - component: {fileID: 8116377130257265185}
   m_Layer: 0
   m_Name: TT R Thigh
   m_TagString: Untagged
@@ -1227,6 +1268,18 @@ Transform:
   - {fileID: 6018288755045906348}
   m_Father: {fileID: 6018288755045906346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8116377130257265185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906422}
+  - component: {fileID: 4961887508368014366}
   m_Layer: 0
   m_Name: TT R Toe0
   m_TagString: Untagged
@@ -1258,6 +1312,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4961887508368014366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906424}
+  - component: {fileID: 835115693066512679}
   m_Layer: 0
   m_Name: TT R UpperArm
   m_TagString: Untagged
@@ -1290,6 +1357,18 @@ Transform:
   - {fileID: 6018288755045906416}
   m_Father: {fileID: 6018288755045906350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &835115693066512679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906426}
+  - component: {fileID: 336773604256970009}
   m_Layer: 0
   m_Name: TT Spine
   m_TagString: Untagged
@@ -1322,6 +1402,18 @@ Transform:
   - {fileID: 6018288755045906428}
   m_Father: {fileID: 6018288755045906346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336773604256970009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906428}
+  - component: {fileID: 3340651724154331410}
   m_Layer: 0
   m_Name: TT Spine1
   m_TagString: Untagged
@@ -1354,6 +1447,18 @@ Transform:
   - {fileID: 6018288755045906430}
   m_Father: {fileID: 6018288755045906426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3340651724154331410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906430}
+  - component: {fileID: 5757548387591520536}
   m_Layer: 0
   m_Name: TT Spine2
   m_TagString: Untagged
@@ -1388,6 +1494,18 @@ Transform:
   - {fileID: 6018288755045906350}
   m_Father: {fileID: 6018288755045906428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5757548387591520536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906304}
+  - component: {fileID: 9039294517012562924}
   m_Layer: 0
   m_Name: TT L Finger01
   m_TagString: Untagged
@@ -1421,6 +1540,18 @@ Transform:
   - {fileID: 6018288755045906306}
   m_Father: {fileID: 6018288755045906334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9039294517012562924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906306}
+  - component: {fileID: 6285658748275006422}
   m_Layer: 0
   m_Name: TT L Finger02
   m_TagString: Untagged
@@ -1452,6 +1584,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6285658748275006422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906308}
+  - component: {fileID: 5435449615477688002}
   m_Layer: 0
   m_Name: TT L Finger1
   m_TagString: Untagged
@@ -1484,6 +1629,18 @@ Transform:
   - {fileID: 6018288755045906310}
   m_Father: {fileID: 6018288755045906336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5435449615477688002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906310}
+  - component: {fileID: 795803090319140013}
   m_Layer: 0
   m_Name: TT L Finger11
   m_TagString: Untagged
@@ -1517,6 +1675,18 @@ Transform:
   - {fileID: 6018288755045906312}
   m_Father: {fileID: 6018288755045906308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795803090319140013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906312}
+  - component: {fileID: 159103875024200819}
   m_Layer: 0
   m_Name: TT L Finger12
   m_TagString: Untagged
@@ -1549,6 +1720,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159103875024200819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,6 +1741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906314}
+  - component: {fileID: 8141210903468696208}
   m_Layer: 0
   m_Name: TT L Finger2
   m_TagString: Untagged
@@ -1581,6 +1765,18 @@ Transform:
   - {fileID: 6018288755045906316}
   m_Father: {fileID: 6018288755045906336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8141210903468696208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,6 +1786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906316}
+  - component: {fileID: 7986436990147408053}
   m_Layer: 0
   m_Name: TT L Finger21
   m_TagString: Untagged
@@ -1614,6 +1811,18 @@ Transform:
   - {fileID: 6018288755045906318}
   m_Father: {fileID: 6018288755045906314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7986436990147408053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906318}
+  - component: {fileID: 4735363311642858515}
   m_Layer: 0
   m_Name: TT L Finger22
   m_TagString: Untagged
@@ -1645,6 +1855,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4735363311642858515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906324}
+  - component: {fileID: 1308917744373520683}
   m_Layer: 0
   m_Name: ROOT
   m_TagString: Untagged
@@ -1767,6 +1990,18 @@ Transform:
   - {fileID: 6018288755045906326}
   m_Father: {fileID: 6018288755045906400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1308917744373520683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +2011,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906326}
+  - component: {fileID: 8253432407010494360}
   m_Layer: 0
   m_Name: TT
   m_TagString: Untagged
@@ -1799,6 +2035,18 @@ Transform:
   - {fileID: 6018288755045906346}
   m_Father: {fileID: 6018288755045906324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8253432407010494360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +2056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906328}
+  - component: {fileID: 2134479951632969148}
   m_Layer: 0
   m_Name: TT Head
   m_TagString: Untagged
@@ -1833,6 +2082,18 @@ Transform:
   - {fileID: 1263913849656189358}
   m_Father: {fileID: 6018288755045906344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134479951632969148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +2103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906330}
+  - component: {fileID: 7877538457938213424}
   m_Layer: 0
   m_Name: TT L Calf
   m_TagString: Untagged
@@ -1865,6 +2127,18 @@ Transform:
   - {fileID: 6018288755045906364}
   m_Father: {fileID: 6018288755045906338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7877538457938213424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,6 +2148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906332}
+  - component: {fileID: 4511888134868410346}
   m_Layer: 0
   m_Name: TT L Clavicle
   m_TagString: Untagged
@@ -1897,6 +2172,18 @@ Transform:
   - {fileID: 6018288755045906342}
   m_Father: {fileID: 6018288755045906430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4511888134868410346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,6 +2193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906334}
+  - component: {fileID: 997830495505933513}
   m_Layer: 0
   m_Name: TT L Finger0
   m_TagString: Untagged
@@ -1929,6 +2217,18 @@ Transform:
   - {fileID: 6018288755045906304}
   m_Father: {fileID: 6018288755045906336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &997830495505933513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +2238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906336}
+  - component: {fileID: 958946976879516694}
   m_Layer: 0
   m_Name: TT L Hand
   m_TagString: Untagged
@@ -1965,6 +2266,18 @@ Transform:
   - {fileID: 6018288755045906358}
   m_Father: {fileID: 6018288755045906366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958946976879516694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,6 +2287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906338}
+  - component: {fileID: 1425910247781854774}
   m_Layer: 0
   m_Name: TT L Thigh
   m_TagString: Untagged
@@ -1997,6 +2311,18 @@ Transform:
   - {fileID: 6018288755045906330}
   m_Father: {fileID: 6018288755045906346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425910247781854774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906340}
+  - component: {fileID: 9156911199594804432}
   m_Layer: 0
   m_Name: TT L Toe0
   m_TagString: Untagged
@@ -2028,6 +2355,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9156911199594804432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906342}
+  - component: {fileID: 8206083972245917184}
   m_Layer: 0
   m_Name: TT L UpperArm
   m_TagString: Untagged
@@ -2060,6 +2400,18 @@ Transform:
   - {fileID: 6018288755045906366}
   m_Father: {fileID: 6018288755045906332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8206083972245917184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,6 +2421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906344}
+  - component: {fileID: 2142855149849703014}
   m_Layer: 0
   m_Name: TT Neck
   m_TagString: Untagged
@@ -2092,6 +2445,18 @@ Transform:
   - {fileID: 6018288755045906328}
   m_Father: {fileID: 6018288755045906430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142855149849703014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,6 +2466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906346}
+  - component: {fileID: 7946992816990298303}
   m_Layer: 0
   m_Name: TT Pelvis
   m_TagString: Untagged
@@ -2126,6 +2492,18 @@ Transform:
   - {fileID: 6018288755045906426}
   m_Father: {fileID: 6018288755045906326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7946992816990298303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906348}
+  - component: {fileID: 32825066495076499}
   m_Layer: 0
   m_Name: TT R Calf
   m_TagString: Untagged
@@ -2158,6 +2537,18 @@ Transform:
   - {fileID: 6018288755045906382}
   m_Father: {fileID: 6018288755045906420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32825066495076499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906350}
+  - component: {fileID: 3648546965974483251}
   m_Layer: 0
   m_Name: TT R Clavicle
   m_TagString: Untagged
@@ -2190,6 +2582,18 @@ Transform:
   - {fileID: 6018288755045906424}
   m_Father: {fileID: 6018288755045906430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3648546965974483251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,6 +2603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906352}
+  - component: {fileID: 740190855596991820}
   m_Layer: 0
   m_Name: TT L Finger3
   m_TagString: Untagged
@@ -2222,6 +2627,18 @@ Transform:
   - {fileID: 6018288755045906354}
   m_Father: {fileID: 6018288755045906336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740190855596991820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906354}
+  - component: {fileID: 3425724169963145045}
   m_Layer: 0
   m_Name: TT L Finger31
   m_TagString: Untagged
@@ -2254,6 +2672,18 @@ Transform:
   - {fileID: 6018288755045906356}
   m_Father: {fileID: 6018288755045906352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3425724169963145045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,6 +2693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906356}
+  - component: {fileID: 6809538535770110497}
   m_Layer: 0
   m_Name: TT L Finger32
   m_TagString: Untagged
@@ -2285,6 +2716,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6809538535770110497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906358}
+  - component: {fileID: 4573143747404435350}
   m_Layer: 0
   m_Name: TT L Finger4
   m_TagString: Untagged
@@ -2317,6 +2761,18 @@ Transform:
   - {fileID: 6018288755045906360}
   m_Father: {fileID: 6018288755045906336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4573143747404435350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906360}
+  - component: {fileID: 7364131288779305142}
   m_Layer: 0
   m_Name: TT L Finger41
   m_TagString: Untagged
@@ -2349,6 +2806,18 @@ Transform:
   - {fileID: 6018288755045906362}
   m_Father: {fileID: 6018288755045906358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7364131288779305142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906362}
+  - component: {fileID: 7847320961535590755}
   m_Layer: 0
   m_Name: TT L Finger42
   m_TagString: Untagged
@@ -2380,6 +2850,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7847320961535590755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739484
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6018288755045906364}
   - component: {fileID: 8643403452072583202}
+  - component: {fileID: 5528439593816482042}
   m_Layer: 0
   m_Name: TT L Foot
   m_TagString: Untagged
@@ -2436,6 +2919,18 @@ CapsuleCollider:
   m_Height: 0.22598547
   m_Direction: 0
   m_Center: {x: 0.012007267, y: 2.5636987e-10, z: 0.005633171}
+--- !u!114 &5528439593816482042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906366}
+  - component: {fileID: 8639073621848832118}
   m_Layer: 0
   m_Name: TT L Forearm
   m_TagString: Untagged
@@ -2468,6 +2964,18 @@ Transform:
   - {fileID: 6018288755045906336}
   m_Father: {fileID: 6018288755045906342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8639073621848832118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,6 +2985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906368}
+  - component: {fileID: 6662083242278272605}
   m_Layer: 0
   m_Name: TT R Finger22
   m_TagString: Untagged
@@ -2499,6 +3008,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6662083242278272605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +3029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906370}
+  - component: {fileID: 5259802976352625187}
   m_Layer: 0
   m_Name: TT R Finger3
   m_TagString: Untagged
@@ -2531,6 +3053,18 @@ Transform:
   - {fileID: 6018288755045906372}
   m_Father: {fileID: 6018288755045906418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5259802976352625187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,6 +3074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906372}
+  - component: {fileID: 417395757036720904}
   m_Layer: 0
   m_Name: TT R Finger31
   m_TagString: Untagged
@@ -2563,6 +3098,18 @@ Transform:
   - {fileID: 6018288755045906374}
   m_Father: {fileID: 6018288755045906370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417395757036720904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +3119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906374}
+  - component: {fileID: 8698896708929244729}
   m_Layer: 0
   m_Name: TT R Finger32
   m_TagString: Untagged
@@ -2594,6 +3142,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8698896708929244729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +3163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906376}
+  - component: {fileID: 219326186459022075}
   m_Layer: 0
   m_Name: TT R Finger4
   m_TagString: Untagged
@@ -2626,6 +3187,18 @@ Transform:
   - {fileID: 6018288755045906378}
   m_Father: {fileID: 6018288755045906418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &219326186459022075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,6 +3208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906378}
+  - component: {fileID: 1500530725226416923}
   m_Layer: 0
   m_Name: TT R Finger41
   m_TagString: Untagged
@@ -2659,6 +3233,18 @@ Transform:
   - {fileID: 6018288755045906380}
   m_Father: {fileID: 6018288755045906376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1500530725226416923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +3254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906380}
+  - component: {fileID: 5323129775040192137}
   m_Layer: 0
   m_Name: TT R Finger42
   m_TagString: Untagged
@@ -2691,6 +3278,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5323129775040192137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,6 +3300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6018288755045906382}
   - component: {fileID: 6780090965288505337}
+  - component: {fileID: 3868554940808815894}
   m_Layer: 0
   m_Name: TT R Foot
   m_TagString: Untagged
@@ -2747,6 +3347,18 @@ CapsuleCollider:
   m_Height: 0.22598547
   m_Direction: 0
   m_Center: {x: 0.012007267, y: 2.5636987e-10, z: 0.005633171}
+--- !u!114 &3868554940808815894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +3368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906384}
+  - component: {fileID: 9073495389487031916}
   m_Layer: 0
   m_Name: TT R Finger0
   m_TagString: Untagged
@@ -2779,6 +3392,18 @@ Transform:
   - {fileID: 6018288755045906386}
   m_Father: {fileID: 6018288755045906418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9073495389487031916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +3413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906386}
+  - component: {fileID: 4790446518352660851}
   m_Layer: 0
   m_Name: TT R Finger01
   m_TagString: Untagged
@@ -2812,6 +3438,18 @@ Transform:
   - {fileID: 6018288755045906388}
   m_Father: {fileID: 6018288755045906384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4790446518352660851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,6 +3459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906388}
+  - component: {fileID: 6926337125066897155}
   m_Layer: 0
   m_Name: TT R Finger02
   m_TagString: Untagged
@@ -2844,6 +3483,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6926337125066897155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +3504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906390}
+  - component: {fileID: 7240235391688410903}
   m_Layer: 0
   m_Name: TT R Finger1
   m_TagString: Untagged
@@ -2876,6 +3528,18 @@ Transform:
   - {fileID: 6018288755045906392}
   m_Father: {fileID: 6018288755045906418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7240235391688410903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +3549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906392}
+  - component: {fileID: 7574733097701025745}
   m_Layer: 0
   m_Name: TT R Finger11
   m_TagString: Untagged
@@ -2909,6 +3574,18 @@ Transform:
   - {fileID: 6018288755045906394}
   m_Father: {fileID: 6018288755045906390}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7574733097701025745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +3595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906394}
+  - component: {fileID: 1426866317091075594}
   m_Layer: 0
   m_Name: TT R Finger12
   m_TagString: Untagged
@@ -2941,6 +3619,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426866317091075594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +3640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906396}
+  - component: {fileID: 2013987793782263866}
   m_Layer: 0
   m_Name: TT R Finger2
   m_TagString: Untagged
@@ -2973,6 +3664,18 @@ Transform:
   - {fileID: 6018288755045906398}
   m_Father: {fileID: 6018288755045906418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2013987793782263866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6018288755045739518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,6 +3685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018288755045906398}
+  - component: {fileID: 3175189802223777635}
   m_Layer: 0
   m_Name: TT R Finger21
   m_TagString: Untagged
@@ -3005,6 +3709,18 @@ Transform:
   - {fileID: 6018288755045906368}
   m_Father: {fileID: 6018288755045906396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3175189802223777635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018288755045739518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6051878502598046087
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,6 +3732,7 @@ GameObject:
   - component: {fileID: 1293144825537214314}
   - component: {fileID: 2476336614772187522}
   - component: {fileID: 8693085352825291640}
+  - component: {fileID: 8906784398765483887}
   m_Layer: 0
   m_Name: Glasses
   m_TagString: Untagged
@@ -3088,6 +3805,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8906784398765483887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051878502598046087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6437583643805581086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3849,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6475849975361110651}
-  - {fileID: 1401016115588263895}
   m_Father: {fileID: 3940983280518691917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5625750414151455348
@@ -3371,6 +4099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153409640977450821}
+  - component: {fileID: 1694195332060907948}
   m_Layer: 0
   m_Name: L eye
   m_TagString: Untagged
@@ -3393,6 +4122,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6018288755045906328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1694195332060907948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8740867666325871891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9031534078950365034
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,10 +4158,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9031534078950365034}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06589703, y: 0.38731328, z: 0.58790636}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.49999964, y: 0.49999964, z: 0.5000011, w: -0.49999964}
+  m_LocalPosition: {x: 2.938769, y: 5.879069, z: -0.0001847744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 288996277746976729}
+  m_Father: {fileID: 4261919329267687945}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
