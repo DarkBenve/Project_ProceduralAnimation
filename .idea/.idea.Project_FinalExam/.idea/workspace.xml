@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentSpiderMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentSpiderMovement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene/TestProceduralMove.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene/TestProceduralMove.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +88,7 @@
       <workItem from="1718961061949" duration="6883000" />
       <workItem from="1718975033742" duration="744000" />
       <workItem from="1719059047982" duration="2152000" />
+      <workItem from="1720002373010" duration="898000" />
     </task>
     <servers />
   </component>
