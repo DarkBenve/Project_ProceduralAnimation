@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CamTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CamTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CameraFollow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CameraFollow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/Controller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/Controller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/KeyboardController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/KeyboardController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Extension.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Extension/MathExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Extension/MathExtension.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Extension/PhysicsExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Extension/PhysicsExtension.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/ProceduralBiped.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/FollowTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/FollowTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/IK.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/IK.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/PlayerPivot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/PlayerPivot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ScanArmsAdvanced.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ScanArmsAdvanced.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ProceduralStepMove.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ProceduralStepMove.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/SpiderOrange_Test1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/SpiderOrange_Test1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene/TestProceduralSpider.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene/TestProceduralSpider.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentSpiderMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/ComponentSpiderMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/ComponentSpiderMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/ComponentSpiderMovement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/LegStepper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/ProceduralBiped/LegStepper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/LegStepper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/ProceduralBiped/LegStepper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/LegsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/ProceduralBiped/LegsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/LegsController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/ProceduralBiped/LegsController.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +90,7 @@
       <workItem from="1718975033742" duration="744000" />
       <workItem from="1719059047982" duration="2152000" />
       <workItem from="1720002373010" duration="898000" />
+      <workItem from="1720101334763" duration="1345000" />
     </task>
     <servers />
   </component>
