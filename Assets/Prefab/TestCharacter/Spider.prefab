@@ -201,6 +201,7 @@ MonoBehaviour:
   accelerationBack: 30
   accelerationSide: 30
   friction: 5
+  accelerationShiftClick: 5
   addVelocity: {x: 0, y: 0}
   rotationSpeed: 90
   arcAngle: 270
