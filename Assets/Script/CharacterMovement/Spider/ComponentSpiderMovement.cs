@@ -6,25 +6,27 @@ namespace Script.CharacterMovement
 {
     public class ComponentSpiderMovement : MonoBehaviour
     {
-        [SerializeField] Controller.Controller controller;
-        [SerializeField] float accelerationForward = 40;
-        [SerializeField] float accelerationBack = 40;
-        [SerializeField] float accelerationSide = 40;
-        [SerializeField] float friction = 5;
-        [SerializeField] Vector2 addVelocity = Vector2.zero;
-        Vector2 velocityNoAdd = Vector2.zero;
-        Vector2 velocity = Vector2.zero;
-        float speed = 0;
-        float maxSpeedEstimation;
-        float speedProgress;
+        [SerializeField] private Controller.Controller controller;
+        [SerializeField] private float accelerationForward = 40;
+        [SerializeField] private float accelerationBack = 40;
+        [SerializeField] private float accelerationSide = 40;
+        [SerializeField] private float friction = 5;
+        [SerializeField] private Vector2 addVelocity = Vector2.zero;
+        private Vector2 velocityNoAdd = Vector2.zero;
+        private Vector2 velocity = Vector2.zero;
+        private float speed = 0;
+        private float maxSpeedEstimation;
+        private float speedProgress;
 
         [SerializeField] float rotationSpeed = 90;
 
-        [SerializeField, Range(0, 360)] float arcAngle = 270;
-        [SerializeField] int arcResolution = 6;
-        [SerializeField] LayerMask arcLayer;
-        [SerializeField] Transform arcTransformRotation;
+        [SerializeField, Range(0, 360)] private float arcAngle = 270;
+        [SerializeField] private int arcResolution = 6;
+        [SerializeField] private LayerMask arcLayer;
+        [SerializeField] private Transform arcTransformRotation;
 
+        
+        
         public Controller.Controller Controller
         {
             get => controller;
