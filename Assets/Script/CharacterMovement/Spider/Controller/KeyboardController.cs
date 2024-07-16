@@ -19,6 +19,7 @@ namespace Script.CharacterMovement.Controller
         [SerializeField] KeyCode key_X = KeyCode.H;
         [SerializeField] KeyCode key_Y = KeyCode.U;
 
+        [SerializeField] KeyCode shift = KeyCode.LeftShift;
 
 
         Vector2 Stick(KeyCode left, KeyCode right, KeyCode down, KeyCode up)
@@ -45,6 +46,8 @@ namespace Script.CharacterMovement.Controller
             B.IsPressed = Input.GetKey(key_B);
             X.IsPressed = Input.GetKey(key_X);
             Y.IsPressed = Input.GetKey(key_Y);
+            
+            Shift.IsPressed = Input.GetKey(KeyCode.LeftShift);
         }
     }
 }

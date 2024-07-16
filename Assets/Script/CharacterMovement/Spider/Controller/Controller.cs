@@ -26,6 +26,8 @@ namespace Script.CharacterMovement.Controller
         public Button X = new Button();
         public Button Y = new Button();
 
+        public Button Shift = new Button();
+        
         public class Button
         {
             bool isPressed = false;

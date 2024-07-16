@@ -11,13 +11,15 @@ namespace Script.CharacterMovement
         [SerializeField] private float accelerationBack = 40;
         [SerializeField] private float accelerationSide = 40;
         [SerializeField] private float friction = 5;
+        [SerializeField] private float accelerationShiftClick = 2;
         [SerializeField] private Vector2 addVelocity = Vector2.zero;
-        private Vector2 velocityNoAdd = Vector2.zero;
-        private Vector2 velocity = Vector2.zero;
-        private float speed = 0;
-        private float maxSpeedEstimation;
-        private float speedProgress;
-
+        private Vector2 _velocityNoAdd = Vector2.zero;
+        private Vector2 _velocity = Vector2.zero;
+        private float _speed = 0;
+        private float _maxSpeedEstimation;
+        private float _speedProgress;
+        private bool _isShiftPress;
+        
         [SerializeField] float rotationSpeed = 90;
 
         [SerializeField, Range(0, 360)] private float arcAngle = 270;
@@ -25,8 +27,7 @@ namespace Script.CharacterMovement
         [SerializeField] private LayerMask arcLayer;
         [SerializeField] private Transform arcTransformRotation;
 
-        
-        
+
         public Controller.Controller Controller
         {
             get => controller;
@@ -37,29 +38,29 @@ namespace Script.CharacterMovement
             get => VelocityNoAdd;
             set
             {
-                velocityNoAdd = value;
-                UpdateVeclocity();
+                _velocityNoAdd = value;
+                UpdateVelocity();
             }
         }
 
         public Vector2 Velocity
         {
-            get => velocity;
+            get => _velocity;
         }
 
         public Vector3 Velocity3
         {
-            get => new Vector3(velocity.x, 0, velocity.y);
+            get => new Vector3(_velocity.x, 0, _velocity.y);
         }
 
         public float Speed
         {
-            get => speed;
+            get => _speed;
         }
 
         public float SpeedProgress
         {
-            get => speedProgress;
+            get => _speedProgress;
         }
 
 
@@ -76,12 +77,13 @@ namespace Script.CharacterMovement
 
         void OnDisable()
         {
-            velocityNoAdd = Vector3.zero;
-            UpdateVeclocity();
+            _velocityNoAdd = Vector3.zero;
+            UpdateVelocity();
         }
 
         void Update()
         {
+            _isShiftPress = controller.Shift.IsPressed;
             ApplyVelocity();
             Rotate();
         }
@@ -90,7 +92,7 @@ namespace Script.CharacterMovement
         {
             ApplyAcceleration();
             ApplyFriction();
-            UpdateVeclocity();
+            UpdateVelocity();
         }
 
         void EstimateMaxSpeed()
@@ -107,7 +109,7 @@ namespace Script.CharacterMovement
             v += addVelocity.y;
             s = Mathf.Abs(v);
 
-            maxSpeedEstimation = s;
+            _maxSpeedEstimation = s;
 
             // back
             v = 0;
@@ -121,7 +123,7 @@ namespace Script.CharacterMovement
             v += addVelocity.y;
             s = Mathf.Abs(v);
 
-            maxSpeedEstimation = Mathf.Max(maxSpeedEstimation, s);
+            _maxSpeedEstimation = Mathf.Max(_maxSpeedEstimation, s);
 
             // side
             v = 0;
@@ -135,7 +137,7 @@ namespace Script.CharacterMovement
             v += addVelocity.x * (addVelocity.x > 0 == v > 0 ? 1 : -1);
             s = Mathf.Abs(v);
 
-            maxSpeedEstimation = Mathf.Max(maxSpeedEstimation, s);
+            _maxSpeedEstimation = Mathf.Max(_maxSpeedEstimation, s);
         }
 
         void ApplyAcceleration()
@@ -146,34 +148,42 @@ namespace Script.CharacterMovement
             Vector2 stickL = controller.StickL;
 
             if (stickL != Vector2.zero)
-                velocityNoAdd += Time.fixedDeltaTime *
+                _velocityNoAdd += Time.fixedDeltaTime *
                                  new Vector2(accelerationSide, stickL.y > 0 ? accelerationForward : accelerationBack) *
                                  stickL;
         }
 
         void ApplyFriction()
         {
-            velocityNoAdd -= Time.fixedDeltaTime * friction * velocityNoAdd;
+            _velocityNoAdd -= Time.fixedDeltaTime * friction * _velocityNoAdd;
         }
 
-        void UpdateVeclocity()
+        void UpdateVelocity()
         {
-            velocity = velocityNoAdd + addVelocity;
+            _velocity = _velocityNoAdd + addVelocity;
             UpdateSpeed();
         }
 
         void UpdateSpeed()
         {
-            speed = velocity.magnitude;
-            speedProgress = Mathf.Clamp01(speed / maxSpeedEstimation);
+            if (!_isShiftPress)
+            {
+                _speed = _velocity.magnitude;
+                _speedProgress = Mathf.Clamp01(_speed / _maxSpeedEstimation);
+            }
+            else
+            {
+                _speed = _velocity.magnitude * accelerationShiftClick;
+                _speedProgress = Mathf.Clamp01(_speed / _maxSpeedEstimation);
+            }
         }
 
         void ApplyVelocity()
         {
-            if (velocity == Vector2.zero)
+            if (_velocity == Vector2.zero)
                 return;
 
-            float arcRadius = speed * Time.deltaTime;
+            float arcRadius = _speed * Time.deltaTime;
             Vector3 worldVelocity = arcTransformRotation.TransformVector(Velocity3);
 
             if (PhysicsExtension.ArcCast(transform.position,
