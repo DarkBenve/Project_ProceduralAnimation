@@ -33,7 +33,6 @@ namespace Script.ProceduralMovement.Spider
         {
             List<(Vector3 pos, Quaternion rot, float weight)> points = scan.Points();
 
-            Quaternion rotAvg;
             List<Quaternion> rots = new List<Quaternion>();
             List<float> weights = new List<float>();
 
@@ -49,9 +48,9 @@ namespace Script.ProceduralMovement.Spider
             }
 
             posAvg /= nbPoint;
-            rotAvg = MathExtension.QuatAvgApprox(rots.ToArray(), weights.ToArray());
+            var rotAvg = MathExtension.QuatAvgApprox(rots.ToArray(), weights.ToArray());
 
-            pivot.position = Vector3   .Lerp(transform.position, posAvg, positionWeight);
+            pivot.position = Vector3.Lerp(transform.position, posAvg, positionWeight);
             pivot.rotation = Quaternion.Lerp(transform.rotation, rotAvg, rotationWeight);
         }
     }

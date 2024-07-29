@@ -1,3 +1,5 @@
+using System;
+using Script.Manager;
 using UnityEngine;
 
 namespace Script.CharacterMovement.Camera
@@ -13,7 +15,12 @@ namespace Script.CharacterMovement.Camera
         Quaternion rotProj;
 
 
-        void Awake()
+        private void Awake()
+        {
+            GameManager.Instance.Started += InitCamFollow;
+        }
+
+        private void InitCamFollow()
         {
             if (!target)
             {
@@ -23,6 +30,7 @@ namespace Script.CharacterMovement.Camera
             }
 
             posProj = target.InverseTransformPoint(transform.position);
+            posProj.y = 10;
             rotProj = Quaternion.Inverse(target.rotation) * transform.rotation;
         }
 
