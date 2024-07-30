@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/PlayerJump.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/PlayerJump.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ProceduralStepMoveV2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Spider/ProceduralStepMoveV2.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Camera/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +93,8 @@
       <workItem from="1720101334763" duration="2083000" />
       <workItem from="1721123380330" duration="533000" />
       <workItem from="1722246050361" duration="4161000" />
+      <workItem from="1722342395604" duration="283000" />
+      <workItem from="1722342812392" duration="1124000" />
     </task>
     <servers />
   </component>

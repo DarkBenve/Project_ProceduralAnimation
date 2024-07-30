@@ -6,28 +6,24 @@ namespace Script.CharacterMovement.Camera
 {
     public class CameraFollow : MonoBehaviour
     {
-        [SerializeField] Transform target;
-        [SerializeField] float positionSpeed = 10;
-        [SerializeField] float rotationSpeed = 10;
-        [SerializeField] LayerMask layer;
+        [SerializeField] private Transform target;
+        [SerializeField] private float positionSpeed = 10;
+        [SerializeField] private float rotationSpeed = 10;
+        [SerializeField] private LayerMask layer;
 
         Vector3 posProj;
         Quaternion rotProj;
 
+        
 
-        private void Awake()
+        public void InitCamFollow()
         {
-            GameManager.Instance.Started += InitCamFollow;
-        }
-
-        private void InitCamFollow()
-        {
-            if (!target)
-            {
-                CamTarget camTarget = FindObjectOfType<CamTarget>();
-                if (camTarget)
-                    target = camTarget.transform;
-            }
+            // if (!target)
+            // {
+            //     CamTarget camTarget = FindObjectOfType<CamTarget>();
+            //     if (camTarget)
+            //         target = camTarget.transform;
+            // }
 
             posProj = target.InverseTransformPoint(transform.position);
             posProj.y = 10;
@@ -44,7 +40,7 @@ namespace Script.CharacterMovement.Camera
             if (Physics.Raycast(target.position, dir, out RaycastHit hit, dir.magnitude, layer))
                 pos = hit.point;
 
-            transform.position = Vector3   .Lerp(transform.position, pos, Time.deltaTime * positionSpeed);
+            transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * positionSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * rotationSpeed);
         }
     }
