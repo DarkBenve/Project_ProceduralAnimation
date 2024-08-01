@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Script.Extension;
 using Script.Manager;
@@ -12,13 +13,20 @@ namespace Script.Generator
         [SerializeField] private List<Transform> point;
         [SerializeField] private GameObject prefabEnemy;
         [SerializeField] private int nPlayerSpawn;
-        
+        [SerializeField] private float delaySpawn;
 
-        public void InitSpawnEnemy()
+
+        private void Start()
+        {
+            StartCoroutine(InitSpawnEnemy());
+        }
+
+        private IEnumerator InitSpawnEnemy()
         {
             for (int i = 0; i < nPlayerSpawn; i++)
             {
                 Instantiate(prefabEnemy, point[Random.Range(0, point.Count)]);
+                yield return new WaitForSeconds(delaySpawn);
             }
         }
     }

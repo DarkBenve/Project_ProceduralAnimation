@@ -16,7 +16,6 @@ namespace Script.Manager
         {
             base.Awake();
             Started += cameraFollow.InitCamFollow;
-            Started += SpawnerEnemy.Instance.InitSpawnEnemy;
         }
 
         private void Start()

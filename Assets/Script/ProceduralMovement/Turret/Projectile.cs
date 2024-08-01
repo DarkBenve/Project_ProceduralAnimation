@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour {
     public TurretAI.TurretType type = TurretAI.TurretType.Single;
     public Transform target;
     public bool lockOn;
+    public bool destroyTarget;
     //public bool track;
     public float speed = 1;
     public float turnSpeed = 1;
@@ -71,13 +72,13 @@ public class Projectile : MonoBehaviour {
             //transform.Translate(dir.normalized * distThisFrame, Space.World);
             //transform.LookAt(target);
 
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.Translate(Vector3.forward * (Time.deltaTime * speed));
             transform.rotation = Quaternion.LookRotation(newDirection);
 
         }else if (type == TurretAI.TurretType.Single)
         {
             float singleSpeed = speed * Time.deltaTime;
-            transform.Translate(transform.forward * singleSpeed * 2, Space.World);
+            transform.Translate(transform.forward * (singleSpeed * 2), Space.World);
         }
     }
 
@@ -110,6 +111,10 @@ public class Projectile : MonoBehaviour {
             knockBackPos.y = 1;
             other.transform.position = knockBackPos;
             Explosion();
+            if (destroyTarget)
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 

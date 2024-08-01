@@ -157,6 +157,7 @@ MonoBehaviour:
   type: 2
   target: {fileID: 0}
   lockOn: 0
+  destroyTarget: 1
   speed: 10
   turnSpeed: 4
   catapult: 0
