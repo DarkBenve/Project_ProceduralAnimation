@@ -2,6 +2,7 @@ using System;
 using Script.CharacterMovement.Camera;
 using Script.CharacterMovement.Controller;
 using Script.Extension;
+using Script.Generator;
 using UnityEngine;
 
 namespace Script.Manager
@@ -15,6 +16,7 @@ namespace Script.Manager
         {
             base.Awake();
             Started += cameraFollow.InitCamFollow;
+            Started += SpawnerEnemy.Instance.InitSpawnEnemy;
         }
 
         private void Start()
