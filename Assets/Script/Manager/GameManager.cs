@@ -1,4 +1,5 @@
 using System;
+using Script.CharacterMovement;
 using Script.CharacterMovement.Camera;
 using Script.CharacterMovement.Controller;
 using Script.Extension;
@@ -11,6 +12,8 @@ namespace Script.Manager
     public class GameManager : SingletonBehaviour<GameManager>
     {
         [SerializeField] private CameraFollow cameraFollow;
+        public ComponentSpiderMovement player;
+        
         public event Action Started;
         
 
