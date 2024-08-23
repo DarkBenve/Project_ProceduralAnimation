@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Script.CharacterMovement.Controller;
+using Script.Manager;
 using UnityEngine;
 
 public class TurretAI : MonoBehaviour {
@@ -74,6 +75,8 @@ public class TurretAI : MonoBehaviour {
             {
                 timer = 0;
                 
+                UIManager.Instance.TryToShootSignal();
+                
                 if (animator != null)
                 {
                     animator.SetTrigger("Fire");
@@ -85,7 +88,7 @@ public class TurretAI : MonoBehaviour {
                 }
             }
         }
-	}
+    }
 
     private void CheckForTarget()
     {
@@ -125,7 +128,10 @@ public class TurretAI : MonoBehaviour {
     {
         //shotScript.Shoot(currentTarget);
         if (controller.F.IsPressed)
+        {
             Shoot(currentTarget);
+            UIManager.Instance.OffToShootSignal();   
+        }
         //Debug.Log("We shoot some stuff!");
     }
     

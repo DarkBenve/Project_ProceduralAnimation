@@ -25,9 +25,9 @@ namespace Script.CharacterMovement.Controller
         public Button B = new Button();
         public Button X = new Button();
         public Button Y = new Button();
+        public Button F = new Button();
 
         public Button Shift = new Button();
-        public Button F = new Button();
         
         public class Button
         {

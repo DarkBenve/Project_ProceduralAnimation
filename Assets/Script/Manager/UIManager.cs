@@ -13,9 +13,11 @@ namespace Script.Manager
         [SerializeField] private TextMeshProUGUI scoreTimerText;
         [SerializeField] private Button buttonRestartGame;
         [SerializeField] private GameObject panelFinishGame;
+        [SerializeField] private GameObject panelTryToShoot;
 
         private ButtonManager _buttonManager;
-        
+
+        private bool _isTryToShootSignalOpen;
         private int _currentKill;
         private Timer _timer;
 
@@ -44,6 +46,17 @@ namespace Script.Manager
         {
             _currentKill += 1;
             ChangeTextKill();
+            OffToShootSignal();
+        }
+
+        public void TryToShootSignal()
+        {
+            panelTryToShoot.SetActive(true);
+        }
+        
+        public void OffToShootSignal()
+        {
+            panelTryToShoot.SetActive(false);
         }
 
         private void OffGameUI()
