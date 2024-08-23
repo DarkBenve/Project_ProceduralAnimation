@@ -87,6 +87,10 @@ public class TurretAI : MonoBehaviour {
                     ShootTrigger();
                 }
             }
+            else
+            {
+                UIManager.Instance.OffToShootSignal();
+            }
         }
     }
 
