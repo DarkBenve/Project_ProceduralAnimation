@@ -7,7 +7,6 @@ namespace Script.IA
 {
     public class IAController : MonoBehaviour
     {
-        [SerializeField] private Transform point;
         [SerializeField] private float radius = 10.0f;
         
         private NavMeshAgent _navMeshAgent;
@@ -22,20 +21,14 @@ namespace Script.IA
         {
             if (_navMeshAgent.isActiveAndEnabled && _navMeshAgent.isOnNavMesh)
             {
-                // Controlla se l'agente ha raggiunto la destinazione
                 if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
                 {
                     if (!_navMeshAgent.hasPath || _navMeshAgent.velocity.sqrMagnitude == 0f)
                     {
-                        // L'agente ha raggiunto la destinazione, imposta una nuova destinazione casuale
                         SetRandomDestination();
                     }
                 }
             }
-            // else
-            // {
-            //     Debug.LogWarning("NavMeshAgent non attivo o non posizionato sulla NavMesh.");
-            // }
         }
 
         private void SetRandomDestination()
