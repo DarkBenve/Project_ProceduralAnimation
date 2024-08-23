@@ -3,6 +3,7 @@ using Script.CharacterMovement.Camera;
 using Script.CharacterMovement.Controller;
 using Script.Extension;
 using Script.Generator;
+using TMPro;
 using UnityEngine;
 
 namespace Script.Manager
@@ -11,6 +12,7 @@ namespace Script.Manager
     {
         [SerializeField] private CameraFollow cameraFollow;
         public event Action Started;
+        
 
         protected override void Awake()
         {

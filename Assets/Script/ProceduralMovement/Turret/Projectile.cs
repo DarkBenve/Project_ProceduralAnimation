@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Script.Manager;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
@@ -15,6 +17,7 @@ public class Projectile : MonoBehaviour {
 
     public float knockBack = 0.1f;
     public float boomTimer = 1;
+    public event Action Kill;
     //public Vector3 _startPosition;
     //public float dist;
 
@@ -32,6 +35,8 @@ public class Projectile : MonoBehaviour {
             Vector3 dir = target.position - transform.position;
             transform.rotation = Quaternion.LookRotation(dir);
         }
+        
+        Kill += UIManager.Instance.AddKill;
     }
 
     private void Update()
@@ -114,6 +119,7 @@ public class Projectile : MonoBehaviour {
             if (destroyTarget)
             {
                 Destroy(other.gameObject);
+                Kill?.Invoke();
             }
         }
     }
