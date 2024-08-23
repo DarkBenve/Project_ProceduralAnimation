@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Manager/ButtonManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/Manager/ButtonManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/KeyboardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/CharacterMovement/Spider/Controller/KeyboardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Turret/TurretAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ProceduralMovement/Turret/TurretAI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1722433710562" duration="1134000" />
       <workItem from="1722513820371" duration="4031000" />
       <workItem from="1724403407230" duration="5116000" />
-      <workItem from="1724428670574" duration="901000" />
+      <workItem from="1724428670574" duration="1291000" />
     </task>
     <servers />
   </component>

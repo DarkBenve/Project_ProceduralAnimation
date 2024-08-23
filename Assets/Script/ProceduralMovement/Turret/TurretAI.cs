@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Script.CharacterMovement.Controller;
 using UnityEngine;
 
 public class TurretAI : MonoBehaviour {
@@ -10,10 +11,11 @@ public class TurretAI : MonoBehaviour {
         Dual = 2,
         Catapult = 3,
     }
-    
+
+    public Controller controller;
     public GameObject currentTarget;
     public Transform turreyHead;
-
+    
     public float attackDist = 10.0f;
     public float attackDamage;
     public float shootCoolDown;
@@ -38,7 +40,7 @@ public class TurretAI : MonoBehaviour {
     //public TurretShoot_Base shotScript;
 
     void Start () {
-        InvokeRepeating("ChackForTarget", 0, 0.5f);
+        InvokeRepeating("CheckForTarget", 0, 0.5f);
         //shotScript = GetComponent<TurretShoot_Base>();
 
         if (transform.GetChild(0).GetComponent<Animator>())
@@ -85,7 +87,7 @@ public class TurretAI : MonoBehaviour {
         }
 	}
 
-    private void ChackForTarget()
+    private void CheckForTarget()
     {
         Collider[] colls = Physics.OverlapSphere(transform.position, attackDist);
         float distAway = Mathf.Infinity;
@@ -122,7 +124,8 @@ public class TurretAI : MonoBehaviour {
     private void ShootTrigger()
     {
         //shotScript.Shoot(currentTarget);
-        Shoot(currentTarget);
+        if (controller.F.IsPressed)
+            Shoot(currentTarget);
         //Debug.Log("We shoot some stuff!");
     }
     

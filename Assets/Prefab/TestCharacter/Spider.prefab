@@ -7295,6 +7295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02d99ed6d2ff5f4da31f151e897a3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   currentTarget: {fileID: 0}
   turreyHead: {fileID: 4571345983338593799}
   attackDist: 10

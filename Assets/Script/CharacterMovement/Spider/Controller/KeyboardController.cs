@@ -18,6 +18,7 @@ namespace Script.CharacterMovement.Controller
         [SerializeField] KeyCode key_B = KeyCode.J;
         [SerializeField] KeyCode key_X = KeyCode.H;
         [SerializeField] KeyCode key_Y = KeyCode.U;
+        [SerializeField] KeyCode key_F = KeyCode.F;
 
         [SerializeField] KeyCode shift = KeyCode.LeftShift;
 
@@ -46,6 +47,7 @@ namespace Script.CharacterMovement.Controller
             B.IsPressed = Input.GetKey(key_B);
             X.IsPressed = Input.GetKey(key_X);
             Y.IsPressed = Input.GetKey(key_Y);
+            F.IsPressed = Input.GetKey(key_F);
             
             Shift.IsPressed = Input.GetKey(KeyCode.LeftShift);
         }
