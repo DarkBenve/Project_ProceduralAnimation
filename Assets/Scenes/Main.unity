@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFollow: {fileID: 1481738850}
+  timerMax: 300
   player: {fileID: 477102515}
 --- !u!1 &100473690
 GameObject:
@@ -671,8 +672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTextKill: {fileID: 881190367}
   scoreTimerText: {fileID: 449872860}
+  buttonRestartGame: {fileID: 398503304}
   panelFinishGame: {fileID: 691203275}
-  timerMax: 5
 --- !u!1 &350328853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1207,7 @@ Transform:
   m_GameObject: {fileID: 669897030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -921.4, y: 21.31, z: 729.2}
+  m_LocalPosition: {x: -921.4, y: 21.26, z: 729.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15592,7 +15593,7 @@ Transform:
   m_GameObject: {fileID: 1482277265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -747.6, y: 22.63391, z: 722.3}
+  m_LocalPosition: {x: -747.6, y: 22.55, z: 722.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

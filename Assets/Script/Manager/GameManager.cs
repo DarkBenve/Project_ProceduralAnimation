@@ -12,6 +12,7 @@ namespace Script.Manager
     public class GameManager : SingletonBehaviour<GameManager>
     {
         [SerializeField] private CameraFollow cameraFollow;
+        public float timerMax;
         public ComponentSpiderMovement player;
         
         public event Action Started;

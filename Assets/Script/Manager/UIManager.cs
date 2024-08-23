@@ -1,7 +1,9 @@
+using System;
 using Script.CharacterMovement;
 using Script.Extension;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Script.Manager
 {
@@ -9,8 +11,10 @@ namespace Script.Manager
     {
         [SerializeField] private TextMeshProUGUI currentTextKill;
         [SerializeField] private TextMeshProUGUI scoreTimerText;
+        [SerializeField] private Button buttonRestartGame;
         [SerializeField] private GameObject panelFinishGame;
-        [SerializeField] private float timerMax;
+
+        private ButtonManager _buttonManager;
         
         private int _currentKill;
         private Timer _timer;
@@ -20,7 +24,8 @@ namespace Script.Manager
             base.Awake();
             _currentKill = 0;
             ChangeTextKill();
-            _timer = new Timer(scoreTimerText, timerMax);
+            _timer = new Timer(scoreTimerText, GameManager.Instance.timerMax);
+            _buttonManager = new ButtonManager(buttonRestartGame);
             _timer.FinishGame += FinishGameOpenPanel;
             _timer.FinishGame += OffGameUI;
         }
