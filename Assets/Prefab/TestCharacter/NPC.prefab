@@ -143,4 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3a2b0f58344f5b977cb46c72d39bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 300
+  radius: 50
+  checkInterval: 1
+  recalculateDelay: 2
+  movementThreshold: 0.1
+  stuckTimeout: 3

@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Generator/SpawnerEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Generator/SpawnerEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/NPC.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/IA/IAController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/IA/IAController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +107,7 @@
       <workItem from="1722513820371" duration="4031000" />
       <workItem from="1724403407230" duration="5116000" />
       <workItem from="1724428670574" duration="6331000" />
+      <workItem from="1724506389751" duration="1666000" />
     </task>
     <servers />
   </component>

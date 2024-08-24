@@ -8,24 +8,79 @@ namespace Script.IA
     public class IAController : MonoBehaviour
     {
         [SerializeField] private float radius = 10.0f;
-        
+        [SerializeField] private float checkInterval = 1.0f; // Intervallo di tempo per controllare lo stato del percorso
+        [SerializeField] private float recalculateDelay = 2.0f; // Ritardo prima di ricalcolare in caso di fallimento
+        [SerializeField] private float movementThreshold = 0.1f; // Soglia minima di movimento per considerare il personaggio bloccato
+        [SerializeField] private float stuckTimeout = 3.0f; // Tempo massimo di stallo prima di ricalcolare
+
         private NavMeshAgent _navMeshAgent;
+        private float _checkTimer;
+        private float _recalculateTimer;
+        private Vector3 _lastPosition;
+        private float _stuckTimer;
 
         private void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             SetRandomDestination();
+            _lastPosition = transform.position;
         }
 
         private void Update()
         {
-            if (_navMeshAgent.isActiveAndEnabled && _navMeshAgent.isOnNavMesh)
+            // Aggiorna i timer
+            _checkTimer += Time.deltaTime;
+
+            if (_checkTimer >= checkInterval)
             {
-                if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+                _checkTimer = 0f;
+
+                if (_navMeshAgent.isActiveAndEnabled && _navMeshAgent.isOnNavMesh)
                 {
-                    if (!_navMeshAgent.hasPath || _navMeshAgent.velocity.sqrMagnitude == 0f)
+                    // Controlla se il personaggio è vicino alla destinazione
+                    if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+                    {
+                        if (!_navMeshAgent.hasPath || _navMeshAgent.velocity.sqrMagnitude == 0f)
+                        {
+                            SetRandomDestination();
+                        }
+                    }
+                    else if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid)
+                    {
+                        // Ricalcola il percorso se è invalido
+                        SetRandomDestination();
+                    }
+                    else
+                    {
+                        // Controlla se il personaggio è bloccato (non si muove verso la destinazione)
+                        if (Vector3.Distance(transform.position, _lastPosition) < movementThreshold)
+                        {
+                            _stuckTimer += checkInterval;
+                            if (_stuckTimer >= stuckTimeout)
+                            {
+                                // Ricalcola il percorso se il personaggio è bloccato
+                                SetRandomDestination();
+                                _stuckTimer = 0f;
+                            }
+                        }
+                        else
+                        {
+                            // Se il personaggio si sta muovendo, resetta il timer
+                            _stuckTimer = 0f;
+                        }
+
+                        // Aggiorna la posizione per il prossimo controllo
+                        _lastPosition = transform.position;
+                    }
+                }
+                else
+                {
+                    // Incrementa il timer di ricalcolo quando il personaggio non è su NavMesh o NavMeshAgent è disabilitato
+                    _recalculateTimer += checkInterval;
+                    if (_recalculateTimer >= recalculateDelay)
                     {
                         SetRandomDestination();
+                        _recalculateTimer = 0f;
                     }
                 }
             }
@@ -44,11 +99,9 @@ namespace Script.IA
             }
             else
             {
-                // Non è stato trovato un punto valido sulla NavMesh, riprova
-                SetRandomDestination();
+                // Non è stato trovato un punto valido sulla NavMesh, riprova dopo un breve intervallo
+                Invoke(nameof(SetRandomDestination), recalculateDelay);
             }
         }
-        
-        
     }
 }
