@@ -10,6 +10,7 @@ namespace Script.Manager
     public class UIManager : SingletonBehaviour<UIManager>
     {
         [SerializeField] private TextMeshProUGUI currentTextKill;
+        [SerializeField] private TextMeshProUGUI currentTextKillFinal;
         [SerializeField] private TextMeshProUGUI scoreTimerText;
         [SerializeField] private Button buttonRestartGame;
         [SerializeField] private GameObject panelFinishGame;
@@ -30,6 +31,7 @@ namespace Script.Manager
             _buttonManager = new ButtonManager(buttonRestartGame);
             _timer.FinishGame += FinishGameOpenPanel;
             _timer.FinishGame += OffGameUI;
+            _timer.FinishGame += UpdateScoreFinal;
         }
 
         private void Start()
@@ -59,10 +61,17 @@ namespace Script.Manager
             panelTryToShoot.SetActive(false);
         }
 
+        private void UpdateScoreFinal()
+        {
+            currentTextKillFinal.text = "Score: " + _currentKill;
+        }
+
         private void OffGameUI()
         {
-            currentTextKill.gameObject.SetActive(false);
-            scoreTimerText.gameObject.SetActive(false);
+            Image killPanel = currentTextKill.GetComponentInParent<Image>();
+            Image scoreTimerPanel = scoreTimerText.GetComponentInParent<Image>();
+            killPanel.gameObject.SetActive(false);
+            scoreTimerPanel.gameObject.SetActive(false);
         }
 
         private void ChangeTextKill()
