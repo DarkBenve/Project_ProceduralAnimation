@@ -5,14 +5,22 @@ namespace Script.Manager
 {
     public class ButtonManager
     {
-        public ButtonManager(Button restartButton)
+        public ButtonManager(Button restartButton, Button startGame)
         {
-            restartButton.onClick.AddListener(RestartGame);
+            if (restartButton != null)
+                restartButton.onClick.AddListener(RestartGame);
+            if (startGame != null)
+                startGame.onClick.AddListener(StartGame);
         }
         
-        public void RestartGame()
+        private void RestartGame()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
+        private void StartGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

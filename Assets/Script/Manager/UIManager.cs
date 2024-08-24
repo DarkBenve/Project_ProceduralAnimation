@@ -28,7 +28,7 @@ namespace Script.Manager
             _currentKill = 0;
             ChangeTextKill();
             _timer = new Timer(scoreTimerText, GameManager.Instance.timerMax);
-            _buttonManager = new ButtonManager(buttonRestartGame);
+            _buttonManager = new ButtonManager(buttonRestartGame, null);
             _timer.FinishGame += FinishGameOpenPanel;
             _timer.FinishGame += OffGameUI;
             _timer.FinishGame += UpdateScoreFinal;

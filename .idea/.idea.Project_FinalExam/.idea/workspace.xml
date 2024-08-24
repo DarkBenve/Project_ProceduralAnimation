@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b4b8840-dc2d-405d-be4a-e3bc5f033770" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/Spider_Introduzione.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/TestCharacter/Spider_Introduzione.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Manager/StartGameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Manager/StartGameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_FinalExam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationCamera/StartCamera.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationCamera/StartCamera.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Introduzione.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Introduzione.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/ButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/ButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Manager/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +111,7 @@
       <workItem from="1722513820371" duration="4031000" />
       <workItem from="1724403407230" duration="5116000" />
       <workItem from="1724428670574" duration="6331000" />
-      <workItem from="1724506389751" duration="4268000" />
+      <workItem from="1724506389751" duration="5464000" />
     </task>
     <servers />
   </component>
