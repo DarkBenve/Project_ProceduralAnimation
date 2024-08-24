@@ -89,7 +89,8 @@ public class TurretAI : MonoBehaviour {
             }
             else
             {
-                UIManager.Instance.OffToShootSignal();
+                if (UIManager.Instance != null)
+                    UIManager.Instance.OffToShootSignal();
             }
         }
     }
