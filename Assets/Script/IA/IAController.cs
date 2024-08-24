@@ -7,13 +7,14 @@ namespace Script.IA
 {
     public class IAController : MonoBehaviour
     {
-        [SerializeField] private float radius = 10.0f;
+        [SerializeField] private float radius = 10.0f; // Raggio per la destinazione casuale
         [SerializeField] private float checkInterval = 1.0f; // Intervallo di tempo per controllare lo stato del percorso
         [SerializeField] private float recalculateDelay = 2.0f; // Ritardo prima di ricalcolare in caso di fallimento
         [SerializeField] private float movementThreshold = 0.1f; // Soglia minima di movimento per considerare il personaggio bloccato
         [SerializeField] private float stuckTimeout = 3.0f; // Tempo massimo di stallo prima di ricalcolare
 
         private NavMeshAgent _navMeshAgent;
+        private Animator _animator; // Variabile per l'Animator
         private float _checkTimer;
         private float _recalculateTimer;
         private Vector3 _lastPosition;
@@ -22,6 +23,7 @@ namespace Script.IA
         private void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
+            _animator = GetComponentInChildren<Animator>(); // Inizializza l'Animator
             SetRandomDestination();
             _lastPosition = transform.position;
         }
@@ -37,6 +39,9 @@ namespace Script.IA
 
                 if (_navMeshAgent.isActiveAndEnabled && _navMeshAgent.isOnNavMesh)
                 {
+                    // Aggiorna lo stato dell'animazione in base al movimento
+                    UpdateMovementAnimation();
+
                     // Controlla se il personaggio è vicino alla destinazione
                     if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
                     {
@@ -84,6 +89,13 @@ namespace Script.IA
                     }
                 }
             }
+        }
+
+        private void UpdateMovementAnimation()
+        {
+            // Controlla la velocità dell'agente e aggiorna l'animatore
+            bool isMoving = _navMeshAgent.velocity.sqrMagnitude > 0.1f;
+            _animator.SetBool("IsMoving", isMoving);
         }
 
         private void SetRandomDestination()
