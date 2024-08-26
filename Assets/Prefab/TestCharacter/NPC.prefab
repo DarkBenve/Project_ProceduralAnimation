@@ -92,11 +92,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3a2b0f58344f5b977cb46c72d39bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
+  radius: 25
   checkInterval: 1
-  recalculateDelay: 2
-  movementThreshold: 0.1
-  stuckTimeout: 3
+  recalculateDelay: 1
+  movementThreshold: 0.05
+  stuckTimeout: 2
 --- !u!1001 &3876802474056132412
 PrefabInstance:
   m_ObjectHideFlags: 0

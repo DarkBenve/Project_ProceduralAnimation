@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -7,113 +8,143 @@ namespace Script.IA
 {
     public class IAController : MonoBehaviour
     {
-        [SerializeField] private float radius = 10.0f; // Raggio per la destinazione casuale
-        [SerializeField] private float checkInterval = 1.0f; // Intervallo di tempo per controllare lo stato del percorso
-        [SerializeField] private float recalculateDelay = 2.0f; // Ritardo prima di ricalcolare in caso di fallimento
-        [SerializeField] private float movementThreshold = 0.1f; // Soglia minima di movimento per considerare il personaggio bloccato
-        [SerializeField] private float stuckTimeout = 3.0f; // Tempo massimo di stallo prima di ricalcolare
+        [SerializeField] private float radius = 7.0f; // Raggio per la destinazione casuale
+        [SerializeField] private float checkInterval = 0.5f; // Intervallo di tempo per controllare lo stato del percorso
+        [SerializeField] private float movementThreshold = 0.05f; // Soglia minima di movimento per considerare il personaggio bloccato
+        [SerializeField] private float stuckTimeout = 1.5f; // Tempo massimo di stallo prima di ricalcolare
+        [SerializeField] private float minIdleTime = 0.1f; // Tempo minimo di attesa prima di ripartire
+        [SerializeField] private float maxIdleTime = 0.5f; // Tempo massimo di attesa prima di ripartire
+        [SerializeField] private float navMeshBorderBuffer = 0.5f; // Distanza minima dal bordo della NavMesh
 
         private NavMeshAgent _navMeshAgent;
-        private Animator _animator; // Variabile per l'Animator
-        private float _checkTimer;
-        private float _recalculateTimer;
+        private Animator _animator;
         private Vector3 _lastPosition;
         private float _stuckTimer;
 
         private void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
-            _animator = GetComponentInChildren<Animator>(); // Inizializza l'Animator
+            _animator = GetComponentInChildren<Animator>();
             SetRandomDestination();
             _lastPosition = transform.position;
+            StartCoroutine(CheckMovement());
         }
 
-        private void Update()
+        private IEnumerator CheckMovement()
         {
-            // Aggiorna i timer
-            _checkTimer += Time.deltaTime;
-
-            if (_checkTimer >= checkInterval)
+            while (true)
             {
-                _checkTimer = 0f;
+                yield return new WaitForSeconds(checkInterval);
 
                 if (_navMeshAgent.isActiveAndEnabled && _navMeshAgent.isOnNavMesh)
                 {
-                    // Aggiorna lo stato dell'animazione in base al movimento
-                    UpdateMovementAnimation();
-
-                    // Controlla se il personaggio è vicino alla destinazione
-                    if (!_navMeshAgent.pathPending && _navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+                    if (!_navMeshAgent.pathPending)
                     {
-                        if (!_navMeshAgent.hasPath || _navMeshAgent.velocity.sqrMagnitude == 0f)
+                        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+                        {
+                            if (!_navMeshAgent.hasPath || _navMeshAgent.velocity.sqrMagnitude == 0f)
+                            {
+                                yield return new WaitForSeconds(Random.Range(minIdleTime, maxIdleTime));
+                                SetRandomDestination();
+                            }
+                        }
+                        else if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid || IsPathTooLong())
                         {
                             SetRandomDestination();
                         }
-                    }
-                    else if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid)
-                    {
-                        // Ricalcola il percorso se è invalido
-                        SetRandomDestination();
-                    }
-                    else
-                    {
-                        // Controlla se il personaggio è bloccato (non si muove verso la destinazione)
-                        if (Vector3.Distance(transform.position, _lastPosition) < movementThreshold)
-                        {
-                            _stuckTimer += checkInterval;
-                            if (_stuckTimer >= stuckTimeout)
-                            {
-                                // Ricalcola il percorso se il personaggio è bloccato
-                                SetRandomDestination();
-                                _stuckTimer = 0f;
-                            }
-                        }
                         else
                         {
-                            // Se il personaggio si sta muovendo, resetta il timer
-                            _stuckTimer = 0f;
-                        }
+                            var distanceMoved = Vector3.Distance(transform.position, _lastPosition);
+                            if (distanceMoved < movementThreshold)
+                            {
+                                _stuckTimer += checkInterval;
+                                if (_stuckTimer >= stuckTimeout)
+                                {
+                                    SetRandomDestination();
+                                }
+                            }
+                            else
+                            {
+                                _stuckTimer = 0f;
+                            }
 
-                        // Aggiorna la posizione per il prossimo controllo
-                        _lastPosition = transform.position;
+                            _lastPosition = transform.position;
+                        }
                     }
-                }
-                else
-                {
-                    // Incrementa il timer di ricalcolo quando il personaggio non è su NavMesh o NavMeshAgent è disabilitato
-                    _recalculateTimer += checkInterval;
-                    if (_recalculateTimer >= recalculateDelay)
-                    {
-                        SetRandomDestination();
-                        _recalculateTimer = 0f;
-                    }
+
+                    UpdateMovementAnimation();  // Aggiorna l'animazione ad ogni ciclo
                 }
             }
         }
 
         private void UpdateMovementAnimation()
         {
-            // Controlla la velocità dell'agente e aggiorna l'animatore
-            bool isMoving = _navMeshAgent.velocity.sqrMagnitude > 0.1f;
+            // Aggiorna l'animazione non appena il personaggio inizia a muoversi
+            bool isMoving = _navMeshAgent.velocity.sqrMagnitude > 0.01f; // Soglia ridotta per rilevare il movimento
             _animator.SetBool("IsMoving", isMoving);
         }
 
         private void SetRandomDestination()
         {
-            Vector3 randomDirection = Random.insideUnitSphere * radius;
-            randomDirection += transform.position;
+            Vector3 finalPosition = Vector3.zero;
+            NavMeshPath path = new NavMeshPath();
 
+            do
+            {
+                Vector3 randomDirection = Random.insideUnitSphere * radius;
+                randomDirection += transform.position;
+
+                NavMeshHit hit;
+                if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
+                {
+                    finalPosition = hit.position;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            while (IsNearNavMeshEdge(finalPosition) || !IsPathValid(finalPosition, path));
+
+            _navMeshAgent.SetDestination(finalPosition);
+
+            // Aggiorna immediatamente l'animazione al momento di impostare la destinazione
+            UpdateMovementAnimation();
+        }
+
+        private bool IsNearNavMeshEdge(Vector3 position)
+        {
             NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
+            if (NavMesh.SamplePosition(position, out hit, navMeshBorderBuffer, NavMesh.AllAreas))
             {
-                Vector3 finalPosition = hit.position;
-                _navMeshAgent.SetDestination(finalPosition);
+                return (hit.position - position).sqrMagnitude > navMeshBorderBuffer * navMeshBorderBuffer;
             }
-            else
+            return true;
+        }
+
+        private bool IsPathValid(Vector3 targetPosition, NavMeshPath path)
+        {
+            _navMeshAgent.CalculatePath(targetPosition, path);
+
+            // Restituisci true se il percorso è completo e non tagliato
+            return path.status == NavMeshPathStatus.PathComplete;
+        }
+
+        private bool IsPathTooLong()
+        {
+            if (_navMeshAgent.path.status == NavMeshPathStatus.PathComplete)
             {
-                // Non è stato trovato un punto valido sulla NavMesh, riprova dopo un breve intervallo
-                Invoke(nameof(SetRandomDestination), recalculateDelay);
+                float pathLength = 0.0f;
+                Vector3[] corners = _navMeshAgent.path.corners;
+
+                for (int i = 1; i < corners.Length; i++)
+                {
+                    pathLength += Vector3.Distance(corners[i - 1], corners[i]);
+                }
+
+                return pathLength > (radius * 2);
             }
+            return false;
         }
     }
 }
